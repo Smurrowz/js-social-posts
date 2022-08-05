@@ -96,14 +96,14 @@ posts.forEach(el => {
     postInfoDate = dateDifference + ' giorni fa'
   }else if(dateDifference >= 31 && dateDifference < 365){
     postInfoDate = Math.floor(dateDifference / 30 )
-    if(postInfoDate < 1){
+    if(postInfoDate < 2){
       postInfoDate = postInfoDate + ' mese fa'
     } else{
       postInfoDate = postInfoDate + ' mesi fa'
     }
   }else if(dateDifference >= 365){
     postInfoDate = Math.floor(dateDifference / 365 )
-    if(postInfoDate < 1){
+    if(postInfoDate < 2){
       postInfoDate = postInfoDate + ' anno fa'
     }else{
       postInfoDate = postInfoDate + ' anni fa'
