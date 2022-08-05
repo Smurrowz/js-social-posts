@@ -25,6 +25,12 @@ body{
   width: 70px;
   height: 70px;
 }
+.avatar-imgless{
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: cadetblue;
+}
 .card-post-author{
   font-weight: bold;
   font-size:1.25rem ;
