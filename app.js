@@ -16,7 +16,7 @@ const posts = [
       nome: 'Pablo Escobar',
       avatar: 'https://biografieonline.it/img/bio/p/Pablo_Escobar.jpg',
     },
-    data: '08-05-2022',
+    data: '02-12-1993',
     testo: 'Ognuno ha un prezzo, la cosa importante è scoprire qual è.',
     immagine: 'https://www.ilmessaggero.it/photos/MED/85/09/3778509_2234_escobar_1.jpg',
     likes: 50,
@@ -27,7 +27,7 @@ const posts = [
       nome: 'Pietro Pacciani',
       avatar: 'https://static.fanpage.it/wp-content/uploads/2017/03/pacciani1.jpg',
     },
-    data: '05-02-2005',
+    data: '05-02-1998',
     testo: 'Se ni mondo esistesse un po di bene e ognun si considerasse suo fratello, ci sarebbe meno pensieri e meno pene e il mondo ne sarebbe assai più bello.',
     immagine: 'https://img.ilgcdn.com/sites/default/files/styles/xl/public/foto/2021/12/13/1639377016-agenzia-fotogramma-fgr142076.jpg?_=1639377016',
     likes: 15000,
@@ -50,10 +50,22 @@ const posts = [
       
 
     },
-    data: '05-08-2022',
+    data: '08-05-2022',
     testo: 'GODO FINALMENTE LE VACANZE',
     immagine: 'https://c8.alamy.com/compit/2d684gd/godo-ra-5-giugno-2019-la-luce-del-sole-sta-illuminando-il-segnale-stradale-di-godo-piccolo-villaggio-2d684gd.jpg',
     likes: 0,
+  },
+  {
+    id: 5,
+    autore: {
+      nome: 'Nigel DiNella',
+      avatar :'https://i.ytimg.com/vi/CtMqOZbmJvQ/maxresdefault.jpg',
+
+    },
+    data: '08-04-2022',
+    testo: 'Mauro voglio andare in vacanza, lasciami stare pls ti scongiuro',
+    immagine: 'https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/04/crying_toddler-1296x728-header.jpg?w=1155&h=1528',
+    likes: 1,
   },
 
 ]
@@ -92,6 +104,8 @@ posts.forEach(el => {
 
   if(dateDifference < 1 ){
     postInfoDate = 'Oggi'
+  }else if(dateDifference > 0 && dateDifference < 2){
+    postInfoDate = 'Ieri'
   }else if(dateDifference > 1 && dateDifference < 31){
     postInfoDate = dateDifference + ' giorni fa'
   }else if(dateDifference >= 31 && dateDifference < 365){
