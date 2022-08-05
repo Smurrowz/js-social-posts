@@ -34,7 +34,10 @@ body{
   color: red;
   font-size: 25px;
   font-weight: bold;
-  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   
   
 }

@@ -47,8 +47,8 @@ const posts = [
     id: 4,
     autore: {
       nome: 'Piermenti Sfracellozzi',
-      avatar: null,
       
+
     },
     data: '05-08-2022',
     testo: 'GODO FINALMENTE LE VACANZE',
@@ -73,13 +73,23 @@ posts.forEach(el => {
   const cognomeL = nomeCognome[1].split('')
   const primaLetteraNome = nomeL[0]
   const primaLetteraCognome = cognomeL[0]
-  console.log(primaLetteraNome, primaLetteraCognome)
+  const iniziali = primaLetteraNome + ' ' + primaLetteraCognome
+  console.log(iniziali)
+  let imgProf = null
+
+  if (el.autore.avatar == null) {
+    imgProf = iniziali
+  }
+  else {
+    imgProf = `<img class="avatar-img" src="${el.autore.avatar}" alt="${primaLetteraNome} ${primaLetteraCognome}"></img>`
+  }
+
 
   feedEl.innerHTML +=
     `<div class="mycontainer">
       <div class="card-top">
         <div class="avatar">
-          <img class="avatar-img" src="${el.autore.avatar}" alt="${primaLetteraNome} ${primaLetteraCognome}">
+          ${imgProf}
         </div>
         <div>
           <h2 class="card-post-author">${el.autore.nome}</h2>
@@ -92,16 +102,16 @@ posts.forEach(el => {
         <button type="button" class="like-button"><i class="fas fa-thumbs-up"></i> Mi Piace</button> <span class="like-counter">Piace a ${el.likes} persone</span>
       </div>
     </div>`
-   
-
-  });
 
 
+});
 
 
 
-  const likeButtons = document.querySelectorAll('.like-button')
-  const likeCounters = document.querySelectorAll('.like-counter')
+
+
+const likeButtons = document.querySelectorAll('.like-button')
+const likeCounters = document.querySelectorAll('.like-counter')
 
 
 for (let i = 0; i < likeButtons.length; i++) {
