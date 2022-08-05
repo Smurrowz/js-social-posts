@@ -13,13 +13,13 @@ const posts = [
   {
     id: 1,
     autore: {
-      nome: 'Pablo Escobar',
-      avatar: 'https://biografieonline.it/img/bio/p/Pablo_Escobar.jpg',
+      nome: 'Gianluca Lomarco',
+      avatar: 'https://scontent.fpsr1-1.fna.fbcdn.net/v/t1.6435-9/121143737_10221704869284969_1392065519028001009_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=dG-r5FZjYukAX8lU_vz&_nc_ht=scontent.fpsr1-1.fna&oh=00_AT-HwV8mCZ9xlEQXaUNsp5VnusvcqBHI6bw9zku7FZadPA&oe=6311318F',
     },
-    data: '02-12-1993',
-    testo: 'Ognuno ha un prezzo, la cosa importante è scoprire qual è.',
-    immagine: 'https://www.ilmessaggero.it/photos/MED/85/09/3778509_2234_escobar_1.jpg',
-    likes: 50,
+    data: '08-05-2022',
+    testo: 'Sono il piú forte del mondo a disegnare',
+    immagine: 'img/schermata_2022-08-05_alle_13.50.08.png',
+    likes: 9999999,
   },
   {
     id: 2,
