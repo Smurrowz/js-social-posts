@@ -1,0 +1,69 @@
+body{
+  background-color: rgb(73, 73, 168);
+}
+
+.mycontainer{
+  margin: 0 auto;
+  width: 500px;
+  background-color: #f8f9fa;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.card-top{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.avatar-img{
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  width: 70px;
+  height: 70px;
+}
+.card-post-author{
+  font-weight: bold;
+  font-size:1.25rem ;
+}
+.card-post-date{
+  font-weight: 600;
+  font-size: 1rem;
+  color: grey;
+}
+
+.post-text{
+  font-weight: 500;
+}
+
+.post-img{
+  margin-bottom:0.5rem ;
+  max-width: 100%;
+  height: auto;
+}
+
+.like-button{
+  color: rgb(98, 97, 97);
+  border: none;
+  line-height: 1.5rem;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  background-color: #f8f9fa;
+}
+.like-button.active{
+  color: rgb(129, 192, 34);
+}
+.like-counter{
+  color: rgb(98, 97, 97);
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+.like-section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
