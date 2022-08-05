@@ -47,6 +47,7 @@ const posts = [
     id: 4,
     autore: {
       nome: 'Piermenti Sfracellozzi',
+      avatar: null,
       
     },
     data: '05-08-2022',
@@ -67,12 +68,18 @@ posts.forEach(el => {
   const [mese, giorno, anno] = dataSplitted
   let dataIta = [giorno, mese, anno].join('/')
   imgArray.push(el.autore.avatar)
+  const nomeCognome = el.autore.nome.split(' ')
+  const nomeL = nomeCognome[0].split('')
+  const cognomeL = nomeCognome[1].split('')
+  const primaLetteraNome = nomeL[0]
+  const primaLetteraCognome = cognomeL[0]
+  console.log(primaLetteraNome, primaLetteraCognome)
 
   feedEl.innerHTML +=
     `<div class="mycontainer">
       <div class="card-top">
         <div class="avatar">
-          <img class="avatar-img" src="${el.autore.avatar}" alt="">
+          <img class="avatar-img" src="${el.autore.avatar}" alt="${primaLetteraNome} ${primaLetteraCognome}">
         </div>
         <div>
           <h2 class="card-post-author">${el.autore.nome}</h2>
@@ -85,15 +92,10 @@ posts.forEach(el => {
         <button type="button" class="like-button"><i class="fas fa-thumbs-up"></i> Mi Piace</button> <span class="like-counter">Piace a ${el.likes} persone</span>
       </div>
     </div>`
-    const nomeCognome = el.autore.nome.split(' ')
-    const nomeL = nomeCognome[0].split('')
-    const cognomeL = nomeCognome[1].split('')
-    const primaLetteraNome = nomeL[0]
-    const primaLetteraCognome = cognomeL[0]
-    console.log(primaLetteraNome, primaLetteraCognome)
-    
+   
 
   });
+
 
 
 

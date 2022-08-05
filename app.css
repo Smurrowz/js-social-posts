@@ -22,14 +22,21 @@ body{
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
-  width: 70px;
-  height: 70px;
+  width: 100%;
+  height: 100%;
+  
+
 }
-.avatar-imgless{
+.avatar{
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  background-color: cadetblue;
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: beige;
+  
+  
 }
 .card-post-author{
   font-weight: bold;
