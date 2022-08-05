@@ -31,12 +31,13 @@ body{
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  color: red;
+  color: rgb(251, 251, 251);
   font-size: 25px;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color:  rgb(73, 73, 168);
   
   
   

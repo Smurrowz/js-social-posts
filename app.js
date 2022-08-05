@@ -83,6 +83,36 @@ posts.forEach(el => {
   else {
     imgProf = `<img class="avatar-img" src="${el.autore.avatar}" alt="${primaLetteraNome} ${primaLetteraCognome}"></img>`
   }
+  const dateToday = new Date();
+  const postDate = new Date(el.data)
+   let postInfoDate
+  console.log(postDate)
+  let dateDifference = (Math.floor(((dateToday - postDate)) / (1000 * 60 * 60 * 24)))
+  console.log(dateDifference)
+
+  if(dateDifference < 1 ){
+    postInfoDate = 'Oggi'
+  }else if(dateDifference > 1 && dateDifference < 31){
+    postInfoDate = dateDifference + ' giorni fa'
+  }else if(dateDifference > 31 && dateDifference < 365){
+    postInfoDate = Math.floor(dateDifference / 30 )
+    if(postInfoDate < 1){
+      postInfoDate = postInfoDate + ' mese fa'
+    } else{
+      postInfoDate = postInfoDate + ' mesi fa'
+    }
+  }else if(dateDifference > 365){
+    postInfoDate = Math.floor(dateDifference / 365 )
+    if(postInfoDate < 1){
+      postInfoDate = postInfoDate + ' anno fa'
+    }else{
+      postInfoDate = postInfoDate + ' anni fa'
+    }
+  }
+    
+  
+   console.log(postInfoDate)
+  
 
 
   feedEl.innerHTML +=
@@ -93,7 +123,7 @@ posts.forEach(el => {
         </div>
         <div>
           <h2 class="card-post-author">${el.autore.nome}</h2>
-          <h3 class="card-post-date">${dataIta}</h3>
+          <h3 class="card-post-date">${dataIta} - ${postInfoDate}</h3>
         </div>
       </div>
       <p class="post-text">${el.testo}</p>
